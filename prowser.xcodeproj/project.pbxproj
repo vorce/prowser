@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23E864641E01DA1B002D621C /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E864621E01DA1B002D621C /* PreferencesWindow.swift */; };
+		23E864651E01DA1B002D621C /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E864631E01DA1B002D621C /* PreferencesWindow.xib */; };
+		23E864671E01F8A9002D621C /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E864661E01F8A9002D621C /* URLHandler.swift */; };
+		23E864691E01F93C002D621C /* BrowserRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E864681E01F93C002D621C /* BrowserRule.swift */; };
 		23F4D44D1D13E64A001FAF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F4D44C1D13E64A001FAF0F /* AppDelegate.swift */; };
 		23F4D44F1D13E64A001FAF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F4D44E1D13E64A001FAF0F /* Assets.xcassets */; };
 		23F4D4521D13E64A001FAF0F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F4D4501D13E64A001FAF0F /* MainMenu.xib */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23E864621E01DA1B002D621C /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		23E864631E01DA1B002D621C /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		23E864661E01F8A9002D621C /* URLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
+		23E864681E01F93C002D621C /* BrowserRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowserRule.swift; sourceTree = "<group>"; };
 		23F4D4491D13E64A001FAF0F /* prowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F4D44C1D13E64A001FAF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23F4D44E1D13E64A001FAF0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,9 +115,13 @@
 				23F4D44E1D13E64A001FAF0F /* Assets.xcassets */,
 				23F4D4501D13E64A001FAF0F /* MainMenu.xib */,
 				23F4E9B71D1436C4004DA3CC /* Docker.swift */,
+				23E864661E01F8A9002D621C /* URLHandler.swift */,
+				23E864681E01F93C002D621C /* BrowserRule.swift */,
 				23F4E9BB1D1594C5004DA3CC /* EnvironmentVariable.swift */,
 				23F4E9B91D143F3F004DA3CC /* DockerImage.swift */,
 				23F4E9B51D143405004DA3CC /* StatusMenuController.swift */,
+				23E864621E01DA1B002D621C /* PreferencesWindow.swift */,
+				23E864631E01DA1B002D621C /* PreferencesWindow.xib */,
 				23F4D4531D13E64A001FAF0F /* Info.plist */,
 			);
 			path = prowser;
@@ -241,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F4D44F1D13E64A001FAF0F /* Assets.xcassets in Resources */,
+				23E864651E01DA1B002D621C /* PreferencesWindow.xib in Resources */,
 				23F4D4521D13E64A001FAF0F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,10 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E864691E01F93C002D621C /* BrowserRule.swift in Sources */,
+				23E864671E01F8A9002D621C /* URLHandler.swift in Sources */,
 				23F4E9B61D143405004DA3CC /* StatusMenuController.swift in Sources */,
 				23F4E9BC1D1594C5004DA3CC /* EnvironmentVariable.swift in Sources */,
 				23F4E9B81D1436C5004DA3CC /* Docker.swift in Sources */,
 				23F4D44D1D13E64A001FAF0F /* AppDelegate.swift in Sources */,
+				23E864641E01DA1B002D621C /* PreferencesWindow.swift in Sources */,
 				23F4E9BA1D143F3F004DA3CC /* DockerImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

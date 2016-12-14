@@ -14,4 +14,12 @@ I have yet to publish this to the App store (or anywhere else really) - so you n
 3. Click "Export..."
 4. Chose "Export as a Mac Application"
 
-This should generate a `dockermnu.app` ready to be run.
+This should generate a `prowser.app` ready to be run.
+
+## TODO
+
+- Remove unused code
+- Make it possible to define rules in Prefernces
+    - Everything from app Skype -> Browser A
+    - Everything with url *gmail* -> Browser B
+

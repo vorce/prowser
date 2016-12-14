@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  prowser
 //
-//  Created by Joel Carlbark on 2016-06-17.
+//  Created by Joel Carlbark on 2016-12-12.
 //  Copyright © 2016 Joel Carlbark. All rights reserved.
 //
 
@@ -11,13 +11,19 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   
+  // var previousURLHandler: CFString!
+  
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     NSAppleEventManager.shared().setEventHandler(self, andSelector: #selector(self.handleGetURL(event:reply:)), forEventClass: UInt32(kInternetEventClass), andEventID: UInt32(kAEGetURL) )
+
+    // previousURLHandler = LSCopyDefaultHandlerForURLScheme("http" as CFString) as! CFString!
     LSSetDefaultHandlerForURLScheme("http" as CFString, "vorce.prowser" as CFString)
     LSSetDefaultHandlerForURLScheme("https" as CFString, "vorce.prowser" as CFString)
   }
   
   func applicationWillTerminate(_ aNotification: Notification) {
+    // LSSetDefaultHandlerForURLScheme("http" as CFString, previousURLHandler)
+    // LSSetDefaultHandlerForURLScheme("https" as CFString, previousURLHandler)
   }
   
   func handleGetURL(event: NSAppleEventDescriptor, reply:NSAppleEventDescriptor) {
@@ -39,7 +45,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
   }
   
-  // open -a Firefox 'http://www.youtube.com/'
   func openWith(app: String, url: String) {
     debugPrint("Opening \(url) with app \(app)")
     let task = Process()

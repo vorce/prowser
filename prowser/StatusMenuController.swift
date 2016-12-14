@@ -8,12 +8,12 @@
 
 import Cocoa
 
-class StatusMenuController: NSObject {
+class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    // let dockerApi = Docker()
-    
+    var preferencesWindow: PreferencesWindow!
+  
     override func awakeFromNib() {
       let icon = NSImage(named: "IconSet")
       icon?.isTemplate = true
@@ -21,10 +21,8 @@ class StatusMenuController: NSObject {
       statusItem.image = icon
       statusItem.menu = statusMenu
         
-      // Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(StatusMenuController.dockerPs), userInfo: nil, repeats: true)
-
-      // debugPrint(dockerApi.dockerImages())
-      // addMenuItems(dockerApi.dockerImages())
+      preferencesWindow = PreferencesWindow()
+      preferencesWindow.delegate = self
     }
     
     @IBAction func quitClicked(_ sender: NSMenuItem) {
@@ -39,17 +37,22 @@ class StatusMenuController: NSObject {
         addMenuItems(images)
     } */
     
-    /* @IBAction func stopAllClicked(_ sender: NSMenuItem) {
-        let priority = DispatchQueue.GlobalQueuePriority.default
+    @IBAction func preferencesClicked(_ sender: NSMenuItem) {
+      preferencesWindow.showWindow(nil)
+        /* let priority = DispatchQueue.GlobalQueuePriority.default
         DispatchQueue.global(priority: priority).async {
             self.dockerApi.stopAll(self.dockerApi.dockerImages())
             DispatchQueue.main.async {
                 self.removeAllImageItems()
             }
-        }
+        } */
     }
+  
+  func preferencesDidUpdate() {
+    updateWeather()
+  }
     
-    func removeAllImageItems() {
+    /* func removeAllImageItems() {
         let menuItems = statusItem.menu!.items
         for item in menuItems {
             if(item.action?.description.contains("stopImage"))! {
