@@ -9,13 +9,8 @@
 import Foundation
 
 class URLHandler {
-  var defaultApp: String
   
-  init(defaultApp: String) {
-    self.defaultApp = defaultApp
-  }
-  
-  func handleApp(app: String, url: String, rules: [BrowserRule]) {
+  func handleApp(app: String, url: String, rules: [BrowserRule], defaultApp: String) {
     var ruleMatched = false
     for rule in rules {
       if(rule.is_matching(sourceApp: app, url: url)) {
@@ -31,6 +26,7 @@ class URLHandler {
     }
   }
   
+  // TODO: There has to be a better way to do this :D
   func openWith(app: String, url: String) {
     debugPrint("Opening \(url) with app \(app)")
     let task = Process()

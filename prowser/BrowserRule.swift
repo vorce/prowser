@@ -24,9 +24,10 @@ class BrowserRule {
       return false
     }
     
-    let sourceMatch = (self.sourceApp ?? "")
+    let sourceMatch = (self.sourceApp ?? "").isEmpty ? false
+                      : sourceApp
                         .lowercased()
-                        .hasPrefix(sourceApp.lowercased())
+                        .contains(self.sourceApp!.lowercased())
     let urlMatch = (self.urlPattern ?? "").isEmpty ? true
                     : url.range(of: self.urlPattern!, options: .regularExpression) != nil
     

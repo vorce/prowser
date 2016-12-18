@@ -16,14 +16,13 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="zl1-aa-7gY" customClass="StatusMenuController" customModule="prowser" customModuleProvider="target">
             <connections>
-                <outlet property="preferencesClicked" destination="35n-sm-kMn" id="33d-GM-s3u"/>
+                <outlet property="preferencesClicked" destination="35n-sm-kMn" id="zi4-PW-AAV"/>
                 <outlet property="statusMenu" destination="NRU-kB-Sho" id="znF-hl-2mu"/>
             </connections>
         </customObject>
         <menu id="NRU-kB-Sho">
             <items>
-                <menuItem title="Preferences" id="35n-sm-kMn">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Preferences" keyEquivalent="," id="35n-sm-kMn">
                     <connections>
                         <action selector="preferencesClicked:" target="zl1-aa-7gY" id="KeB-K5-9UG"/>
                     </connections>
