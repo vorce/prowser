@@ -6,6 +6,7 @@ branches:
 
 xcode_project: prowser.xcodeproj
 xcode_scheme: prowser
+osx_image: xcode8.2
 
 script:
   - xcodebuild clean build -project prowser.xcodeproj -scheme prowser

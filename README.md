@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vorce/prowser.svg?branch=master)](https://travis-ci.org/vorce/prowser)
+
 # prowser
 
 Prowser is a small utility for MacOS which makes sure you open links in the browser of your choice.
