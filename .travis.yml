@@ -1,0 +1,12 @@
+language: objective-c
+
+branches:
+ only:
+  - master
+
+xcode_project: prowser.xcodeproj
+xcode_scheme: prowser
+
+script:
+  - xcodebuild clean build -project prowser.xcodeproj -scheme prowser
+
